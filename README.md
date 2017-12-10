@@ -28,5 +28,3 @@ TODO:
   <li>Write tests for everything</li>
       <li>Add Socket/REST service</li>
 </ul>
-
-GL&HF
