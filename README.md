@@ -11,12 +11,12 @@ Libraries used:
       <li>archLifecycleVersion = '1.0.0'</li>
       <li>timber = '4.6.0'</li>
       <li>mockito = '2.13.0'</li>
-      <li>rxJava = '2.1.7'</li>
 </ul>
  
 Patterns:
     <ul>
   <li>MVVM</li>
+  <li>Dependency Injection</li>
   <li>Repository</li>
       <li>Facade</li>
 </ul>
