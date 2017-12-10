@@ -17,16 +17,15 @@ import timber.log.Timber;
 public class UserViewModel {
 
     private final ResourcesUtil mResourcesUtil;
-    private IRepository mRepository;
-    private ISchedulerFacade mSchedulerFacade;
-
-    private CompositeDisposable mCompositeDisposable = new CompositeDisposable();
     //Output
     public ObservableField<String> name = new ObservableField<>();
     public ObservableField<String> age = new ObservableField<>();
     public ObservableField<Boolean> isPremium = new ObservableField<>();
     //Input
     public ObservableField<String> email = new ObservableField<>();
+    private IRepository mRepository;
+    private ISchedulerFacade mSchedulerFacade;
+    private CompositeDisposable mCompositeDisposable = new CompositeDisposable();
     private UserFragment navigator;
 
 
@@ -68,6 +67,7 @@ public class UserViewModel {
                 : mResourcesUtil.getString(R.string.email_incorrect);
         navigator.showToast(txt);
     }
+
     //onclick in viewModel
     public void setNavigator(UserFragment navigator) {
         this.navigator = navigator;

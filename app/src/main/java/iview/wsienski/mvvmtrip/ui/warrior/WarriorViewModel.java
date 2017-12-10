@@ -16,7 +16,7 @@ import iview.wsienski.mvvmtrip.util.Validations;
 public class WarriorViewModel {
 
     private final IRepository mModel;
-    
+
     private final BehaviorSubject<Warrior> mWarrior = BehaviorSubject.create();
 
     private final ISchedulerFacade mSchedulerProvider;
@@ -27,7 +27,7 @@ public class WarriorViewModel {
         mSchedulerProvider = schedulerProvider;
     }
 
-    
+
     public Observable<String> getStrength() {
         return mWarrior
                 .observeOn(mSchedulerProvider.io())
@@ -35,7 +35,7 @@ public class WarriorViewModel {
                 .flatMap(mModel::getWarriorStrength);
     }
 
-    
+
     public Observable<List<Warrior>> getWarriors() {
         return mModel.getWarriorsObservable();
     }

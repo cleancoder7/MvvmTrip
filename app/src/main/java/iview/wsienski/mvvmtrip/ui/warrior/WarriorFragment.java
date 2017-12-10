@@ -30,17 +30,14 @@ import iview.wsienski.mvvmtrip.model.Warrior;
 
 public class WarriorFragment extends BaseFragment {
 
+    @Inject
+    WarriorViewModel mViewModel;
     private CompositeDisposable mCompositeDisposable;
-
     private TextView mStrengthView;
     private Spinner mWarriorsSpinner;
     private WarriorSpinnerAdapter mWarriorSpinnerAdapter;
-
     private EditText mEmail;
     private Button btnEmailCheck;
-
-    @Inject
-    WarriorViewModel mViewModel;
 
     public WarriorFragment() {
         // Required empty public constructor

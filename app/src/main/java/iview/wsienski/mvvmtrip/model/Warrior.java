@@ -6,12 +6,7 @@ package iview.wsienski.mvvmtrip.model;
 
 public class Warrior {
 
-    public enum WarriorType {
-        INFANTRY, CAVALRY, CANNON
-    }
-
     private final String mName;
-
     private final WarriorType mType;
 
     public Warrior(final String name, final WarriorType type) {
@@ -25,6 +20,10 @@ public class Warrior {
 
     public WarriorType getmType() {
         return mType;
+    }
+
+    public enum WarriorType {
+        INFANTRY, CAVALRY, CANNON
     }
 
 

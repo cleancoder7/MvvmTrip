@@ -3,5 +3,4 @@
     android:id="@+id/root_activity_warrior"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.warrior.WarriorActivity"
-    />
+    tools:context=".ui.warrior.WarriorActivity" />

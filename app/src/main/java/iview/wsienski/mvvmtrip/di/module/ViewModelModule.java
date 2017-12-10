@@ -8,8 +8,8 @@ import iview.wsienski.mvvmtrip.base.ViewModelFactory;
 import iview.wsienski.mvvmtrip.datamodel.IRepository;
 import iview.wsienski.mvvmtrip.schedulers.ISchedulerFacade;
 import iview.wsienski.mvvmtrip.ui.user.UserViewModel;
-import iview.wsienski.mvvmtrip.util.ResourcesUtil;
 import iview.wsienski.mvvmtrip.ui.warrior.WarriorViewModel;
+import iview.wsienski.mvvmtrip.util.ResourcesUtil;
 
 /**
  * Created by Witold Sienski on 10.12.2017.

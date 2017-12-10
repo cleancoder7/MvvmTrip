@@ -25,6 +25,7 @@ import iview.wsienski.mvvmtrip.ui.warrior.WarriorFragment;
 public interface AppComponent {
 
     void inject(MyApplication app);
+
     void inject(WarriorActivity warriorActivity);
 
     void inject(WarriorFragment warriorFragment);

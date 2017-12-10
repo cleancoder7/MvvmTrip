@@ -8,7 +8,7 @@ import android.text.TextUtils;
 
 public class Validations {
 
-    public static boolean checkEmail(String email){
+    public static boolean checkEmail(String email) {
         return !TextUtils.isEmpty(email) && email.contains("@");
     }
 }
