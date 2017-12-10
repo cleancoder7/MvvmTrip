@@ -4,6 +4,9 @@ import android.app.Application;
 
 import iview.wsienski.mvvmtrip.datamodel.IRepository;
 import iview.wsienski.mvvmtrip.datamodel.Repository;
+import iview.wsienski.mvvmtrip.di.compontent.AppComponent;
+import iview.wsienski.mvvmtrip.di.compontent.DaggerAppComponent;
+import iview.wsienski.mvvmtrip.di.module.AppModule;
 import iview.wsienski.mvvmtrip.schedulers.ISchedulerProvider;
 import iview.wsienski.mvvmtrip.schedulers.SchedulerProvider;
 import iview.wsienski.mvvmtrip.warrior.WarriorViewModel;
@@ -14,7 +17,17 @@ import iview.wsienski.mvvmtrip.warrior.WarriorViewModel;
 
 public class MyApplication extends Application {
 
+    private AppComponent appComponent;
+
     private final IRepository model;
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        appComponent = DaggerAppComponent.builder()
+                .appModule(new AppModule(this))
+                .build();
+    }
 
     public MyApplication() {
         model = new Repository();
@@ -30,6 +43,10 @@ public class MyApplication extends Application {
 
     public WarriorViewModel getViewModel() {
         return new WarriorViewModel(getModel(), getSchedulerProvider());
+    }
+
+    public AppComponent getAppComponent() {
+        return appComponent;
     }
 
 
