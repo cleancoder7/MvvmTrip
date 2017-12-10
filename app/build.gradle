@@ -42,6 +42,7 @@ dependencies {
     //LifeCycle
     implementation "android.arch.lifecycle:runtime:$rootProject.archLifecycleRuntimeVersion"
     implementation "android.arch.lifecycle:extensions:$rootProject.archLifecycleVersion"
+    implementation "android.arch.lifecycle:reactivestreams:$rootProject.archLifecycleVersion"
     annotationProcessor "android.arch.lifecycle:compiler:$rootProject.archLifecycleVersion"
     //Timber
     implementation "com.jakewharton.timber:timber:$rootProject.timber"

@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="MVVM RxJava"
-            android:onClick="@{naviagtor.goToMvvmRxJava}"
+            android:onClick="@{naviagtor::goToMvvmRxJava}"
             app:layout_constraintLeft_toRightOf="parent"
             app:layout_constraintRight_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="parent" />
@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="MVVM LiveData"
-            android:onClick="@{naviagtor.gotToMvvmLiveData}"
+            android:onClick="@{naviagtor::gotToMvvmLiveData}"
             app:layout_constraintLeft_toRightOf="parent"
             app:layout_constraintRight_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/mvvm_rxjava" />

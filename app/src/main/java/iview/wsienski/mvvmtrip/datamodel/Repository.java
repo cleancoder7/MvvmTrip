@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import io.reactivex.Observable;
+import iview.wsienski.mvvmtrip.model.Message;
 import iview.wsienski.mvvmtrip.model.Warrior;
 
 /**
@@ -11,6 +12,11 @@ import iview.wsienski.mvvmtrip.model.Warrior;
  */
 
 public class Repository implements IRepository {
+
+    @Override
+    public Observable<Message> getMessage() {
+        return Observable.just(new Message("Important title", "Long story about Android"));
+    }
 
     @Override
     public Observable<List<Warrior>> getWarriorsObservable() {

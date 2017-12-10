@@ -3,6 +3,7 @@ package iview.wsienski.mvvmtrip.datamodel;
 import java.util.List;
 
 import io.reactivex.Observable;
+import iview.wsienski.mvvmtrip.model.Message;
 import iview.wsienski.mvvmtrip.model.Warrior;
 
 /**
@@ -10,6 +11,8 @@ import iview.wsienski.mvvmtrip.model.Warrior;
  */
 
 public interface IRepository {
+
+    Observable<Message> getMessage();
 
     Observable<List<Warrior>> getWarriorsObservable();
 
