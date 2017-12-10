@@ -23,7 +23,6 @@ Patterns:
 
 TODO:
     <ul>
-      <li>Handle onClicks in option with LiveData</li>
   <li>Handle RecyclerView</li>
   <li>Write tests for everything</li>
       <li>Add Socket/REST service</li>
