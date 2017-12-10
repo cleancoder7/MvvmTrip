@@ -9,6 +9,7 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import iview.wsienski.mvvmtrip.MyApplication;
+import iview.wsienski.mvvmtrip.util.ResourcesUtil;
 
 /**
  * Created by Witold Sienski on 10.12.2017.
@@ -37,5 +38,11 @@ public class AppModule {
     @Singleton
     SharedPreferences provideSharedPreferences(MyApplication application) {
         return PreferenceManager.getDefaultSharedPreferences(application);
+    }
+
+    @Provides
+    @Singleton
+    ResourcesUtil provideResourcesUtil(MyApplication application) {
+        return new ResourcesUtil(application);
     }
 }

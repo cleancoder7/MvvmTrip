@@ -7,4 +7,6 @@ package iview.wsienski.mvvmtrip.user;
 public interface UserNavigator {
 
     void checkBtnOnClick();
+
+    void showToast(String txt);
 }

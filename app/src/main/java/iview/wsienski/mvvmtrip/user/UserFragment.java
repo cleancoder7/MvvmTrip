@@ -48,8 +48,10 @@ public class UserFragment extends Fragment implements UserNavigator {
                 inflater, R.layout.user_fragment, container, false);
 
         binding.setViewModel(mViewModel);
+        //onclick in View
         binding.setNavigator(this);
-
+        //onclick in ViewModel
+        mViewModel.setNavigator(this);
         return binding.getRoot();
     }
 
@@ -61,10 +63,14 @@ public class UserFragment extends Fragment implements UserNavigator {
 
     @Override
     public void checkBtnOnClick() {
-        if (mViewModel.checkEmail()) {
-            Toast.makeText(getContext(), "Email is correct", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(getContext(), "Email is incorrect", Toast.LENGTH_SHORT).show();
-        }
+        String txt = mViewModel.checkEmail()
+                ? getString(R.string.email_correct)
+                : getString(R.string.email_incorrect);
+        showToast(txt);
+    }
+
+    @Override
+    public void showToast(String txt) {
+        Toast.makeText(getContext(), txt, Toast.LENGTH_SHORT).show();
     }
 }

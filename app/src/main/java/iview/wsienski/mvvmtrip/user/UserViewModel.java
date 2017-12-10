@@ -4,8 +4,10 @@ import android.databinding.ObservableField;
 import android.text.TextUtils;
 
 import io.reactivex.disposables.CompositeDisposable;
+import iview.wsienski.mvvmtrip.R;
 import iview.wsienski.mvvmtrip.datamodel.IRepository;
 import iview.wsienski.mvvmtrip.schedulers.ISchedulerFacade;
+import iview.wsienski.mvvmtrip.util.ResourcesUtil;
 import timber.log.Timber;
 
 /**
@@ -14,6 +16,7 @@ import timber.log.Timber;
 
 public class UserViewModel {
 
+    private final ResourcesUtil mResourcesUtil;
     private IRepository mRepository;
     private ISchedulerFacade mSchedulerFacade;
 
@@ -24,11 +27,13 @@ public class UserViewModel {
     public ObservableField<Boolean> isPremium = new ObservableField<>();
     //Input
     public ObservableField<String> email = new ObservableField<>();
+    private UserFragment navigator;
 
 
-    public UserViewModel(IRepository repository, ISchedulerFacade schedulerProvider) {
+    public UserViewModel(IRepository repository, ISchedulerFacade schedulerProvider, ResourcesUtil resourcesUtil) {
         this.mRepository = repository;
         this.mSchedulerFacade = schedulerProvider;
+        this.mResourcesUtil = resourcesUtil;
         loadUser();
     }
 
@@ -56,4 +61,15 @@ public class UserViewModel {
         return email != null && !TextUtils.isEmpty(email.get()) && email.get().contains("@");
     }
 
+    //onclick in viewModel
+    public void checkBtnOnClick() {
+        String txt = checkEmail()
+                ? mResourcesUtil.getString(R.string.email_correct)
+                : mResourcesUtil.getString(R.string.email_incorrect);
+        navigator.showToast(txt);
+    }
+    //onclick in viewModel
+    public void setNavigator(UserFragment navigator) {
+        this.navigator = navigator;
+    }
 }

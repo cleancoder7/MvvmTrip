@@ -8,6 +8,7 @@ import iview.wsienski.mvvmtrip.base.ViewModelFactory;
 import iview.wsienski.mvvmtrip.datamodel.IRepository;
 import iview.wsienski.mvvmtrip.schedulers.ISchedulerFacade;
 import iview.wsienski.mvvmtrip.user.UserViewModel;
+import iview.wsienski.mvvmtrip.util.ResourcesUtil;
 import iview.wsienski.mvvmtrip.warrior.WarriorViewModel;
 
 /**
@@ -22,8 +23,8 @@ public class ViewModelModule {
     }
 
     @Provides
-    UserViewModel provideUserViewModel(IRepository repository, ISchedulerFacade schedulerProvider) {
-        return new UserViewModel(repository, schedulerProvider);
+    UserViewModel provideUserViewModel(IRepository repository, ISchedulerFacade schedulerProvider, ResourcesUtil resourcesUtil) {
+        return new UserViewModel(repository, schedulerProvider, resourcesUtil);
     }
 
     @Provides

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MvvmTrip</string>
+    <string name="email_correct">Email is correct</string>
+    <string name="email_incorrect">Email is incorrect</string>
 </resources>

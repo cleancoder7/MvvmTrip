@@ -65,13 +65,24 @@
             app:layout_constraintTop_toBottomOf="@id/isPremium" />
 
         <Button
+            android:id="@+id/btnCheckEmailInView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="@{() -> navigator.checkBtnOnClick()}"
-            android:text="Check email"
+            android:text="Email validation in View"
             app:layout_constraintLeft_toLeftOf="@id/name"
             app:layout_constraintRight_toRightOf="@id/name"
             app:layout_constraintTop_toBottomOf="@id/inputEmail"
-            tools:text="Email validation" />
+            tools:text="Email validation in View" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> viewModel.checkBtnOnClick()}"
+            android:text="Email validation in ViewModel"
+            app:layout_constraintLeft_toLeftOf="@id/name"
+            app:layout_constraintRight_toRightOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@id/btnCheckEmailInView"
+            tools:text="Email validation in ViewModel" />
     </android.support.constraint.ConstraintLayout>
 </layout>
