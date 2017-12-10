@@ -27,4 +27,6 @@ TODO:
   <li>Handle RecyclerView</li>
   <li>Write tests for everything</li>
       <li>Add Socket/REST service</li>
+        <li>Add Room/Realm</li>
+          <li>Improve Dagger, handle scopes</li>
 </ul>
