@@ -6,7 +6,6 @@ import dagger.Module;
 import dagger.Provides;
 import iview.wsienski.mvvmtrip.base.ViewModelFactory;
 import iview.wsienski.mvvmtrip.datamodel.IRepository;
-import iview.wsienski.mvvmtrip.messagelive.MessageViewModel;
 import iview.wsienski.mvvmtrip.schedulers.ISchedulerFacade;
 import iview.wsienski.mvvmtrip.warrior.WarriorViewModel;
 
@@ -24,14 +23,8 @@ public class ViewModelModule {
 
     @Provides
     @Singleton
-    MessageViewModel provideMessageViewModel(IRepository repository){
-        return new MessageViewModel(repository);
-    }
-
-    @Provides
-    @Singleton
-    ViewModelFactory provideViewModelFactory(IRepository repository) {
-        return new ViewModelFactory(repository);
+    ViewModelFactory provideViewModelFactory(IRepository repository, ISchedulerFacade schedulerFacade) {
+        return new ViewModelFactory(repository, schedulerFacade);
     }
 
 }

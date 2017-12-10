@@ -16,4 +16,7 @@ public interface ISchedulerFacade {
     @NonNull
     Scheduler ui();
 
+    @NonNull
+    Scheduler computation();
+
 }

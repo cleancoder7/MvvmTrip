@@ -38,4 +38,10 @@ public class SchedulerFacade implements ISchedulerFacade {
     public Scheduler ui() {
         return AndroidSchedulers.mainThread();
     }
+
+    @NonNull
+    @Override
+    public Scheduler computation() {
+        return Schedulers.computation();
+    }
 }

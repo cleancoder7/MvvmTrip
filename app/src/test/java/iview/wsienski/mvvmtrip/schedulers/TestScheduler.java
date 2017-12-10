@@ -1,5 +1,7 @@
 package iview.wsienski.mvvmtrip.schedulers;
 
+import android.support.annotation.NonNull;
+
 import io.reactivex.Scheduler;
 import io.reactivex.schedulers.Schedulers;
 
@@ -17,6 +19,12 @@ public class TestScheduler implements ISchedulerFacade {
 
     @Override
     public Scheduler ui() {
+        return Schedulers.trampoline();
+    }
+
+    @NonNull
+    @Override
+    public Scheduler computation() {
         return Schedulers.trampoline();
     }
 }
