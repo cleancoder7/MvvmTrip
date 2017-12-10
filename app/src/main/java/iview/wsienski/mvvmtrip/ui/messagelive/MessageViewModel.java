@@ -7,6 +7,7 @@ import iview.wsienski.mvvmtrip.base.BaseViewModel;
 import iview.wsienski.mvvmtrip.datamodel.IRepository;
 import iview.wsienski.mvvmtrip.model.Message;
 import iview.wsienski.mvvmtrip.schedulers.ISchedulerFacade;
+import iview.wsienski.mvvmtrip.util.Validations;
 import timber.log.Timber;
 
 /**
@@ -44,5 +45,9 @@ public class MessageViewModel extends BaseViewModel {
                         }
                 )
         );
+    }
+
+    public boolean checkEmail(String email) {
+        return Validations.checkEmail(email);
     }
 }

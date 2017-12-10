@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import javax.inject.Inject;
@@ -27,6 +29,8 @@ public class MessageFragment extends BaseFragment {
     MessageViewModel messageViewModel;
 
     TextView title, message;
+    EditText email;
+    Button btnCheckEmail;
 
     public MessageFragment() {
         // Required empty public constructor
@@ -60,6 +64,13 @@ public class MessageFragment extends BaseFragment {
             setMessageDesc(message.getMessage());
         });
 
+        btnCheckEmail.setOnClickListener(view -> {
+            String txt = messageViewModel.checkEmail(email.getText().toString())
+                    ? getString(R.string.email_correct)
+                    : getString(R.string.email_incorrect);
+            showToast(txt);
+        });
+
     }
 
     @Override
@@ -68,6 +79,8 @@ public class MessageFragment extends BaseFragment {
         View v = inflater.inflate(R.layout.message_fragment, container, false);
         title = v.findViewById(R.id.title);
         message = v.findViewById(R.id.message);
+        email = v.findViewById(R.id.inputEmail);
+        btnCheckEmail = v.findViewById(R.id.btnCheckEmailInView);
         return v;
     }
 
