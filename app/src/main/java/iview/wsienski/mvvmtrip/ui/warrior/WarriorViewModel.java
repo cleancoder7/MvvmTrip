@@ -12,7 +12,7 @@ import iview.wsienski.mvvmtrip.util.Validations;
 /**
  * Created by Witold Sienski on 09.12.2017.
  */
-
+//RxJava&RxBinding
 public class WarriorViewModel {
 
     private final IRepository mModel;

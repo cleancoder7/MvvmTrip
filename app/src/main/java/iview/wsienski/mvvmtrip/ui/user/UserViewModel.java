@@ -13,7 +13,7 @@ import timber.log.Timber;
 /**
  * Created by Witold Sienski on 10.12.2017.
  */
-
+//Rxjava + DataBinding
 public class UserViewModel {
 
     private final ResourcesUtil mResourcesUtil;

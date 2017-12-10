@@ -13,7 +13,7 @@ import timber.log.Timber;
 /**
  * Created by Witold Sienski on 10.12.2017.
  */
-
+//LiveData
 public class MessageViewModel extends BaseViewModel {
 
     private IRepository mRepository;
