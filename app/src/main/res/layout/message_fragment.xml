@@ -32,10 +32,10 @@
         android:id="@+id/btnCheckEmailInView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="onClick in View"
+        android:text="checkEmail onClick in View"
         app:layout_constraintLeft_toLeftOf="@id/message"
         app:layout_constraintRight_toRightOf="@id/message"
         app:layout_constraintTop_toBottomOf="@id/inputEmail"
-        tools:text="onClick in View" />
+        tools:text="checkEmail onClick in View" />
 
 </android.support.constraint.ConstraintLayout>
