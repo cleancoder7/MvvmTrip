@@ -5,7 +5,7 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import iview.wsienski.mvvmtrip.datamodel.IRepository;
-import iview.wsienski.mvvmtrip.schedulers.ISchedulerProvider;
+import iview.wsienski.mvvmtrip.schedulers.ISchedulerFacade;
 import iview.wsienski.mvvmtrip.warrior.WarriorViewModel;
 
 /**
@@ -16,7 +16,7 @@ public class ViewModelModule {
 
     @Provides
     @Singleton
-    WarriorViewModel provideWarriorViewModel(IRepository repository, ISchedulerProvider schedulerProvider) {
+    WarriorViewModel provideWarriorViewModel(IRepository repository, ISchedulerFacade schedulerProvider) {
         return new WarriorViewModel(repository, schedulerProvider);
     }
 

@@ -4,8 +4,8 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import iview.wsienski.mvvmtrip.schedulers.ISchedulerProvider;
-import iview.wsienski.mvvmtrip.schedulers.SchedulerProvider;
+import iview.wsienski.mvvmtrip.schedulers.ISchedulerFacade;
+import iview.wsienski.mvvmtrip.schedulers.SchedulerFacade;
 
 /**
  * Created by Witold Sienski on 10.12.2017.
@@ -15,7 +15,7 @@ public class SchedulerModule {
 
     @Provides
     @Singleton
-    ISchedulerProvider provideScheduler() {
-        return SchedulerProvider.getInstance();
+    ISchedulerFacade provideScheduler() {
+        return SchedulerFacade.getInstance();
     }
 }

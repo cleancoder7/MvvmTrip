@@ -11,18 +11,18 @@ import io.reactivex.schedulers.Schedulers;
  * Created by Witold Sienski on 09.12.2017.
  */
 
-public class SchedulerProvider implements ISchedulerProvider {
+public class SchedulerFacade implements ISchedulerFacade {
 
     @Nullable
-    private static SchedulerProvider INSTANCE;
+    private static SchedulerFacade INSTANCE;
 
     // Prevent direct instantiation.
-    private SchedulerProvider() {
+    private SchedulerFacade() {
     }
 
-    public static SchedulerProvider getInstance() {
+    public static SchedulerFacade getInstance() {
         if (INSTANCE == null) {
-            INSTANCE = new SchedulerProvider();
+            INSTANCE = new SchedulerFacade();
         }
         return INSTANCE;
     }

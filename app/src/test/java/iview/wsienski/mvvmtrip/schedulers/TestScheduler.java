@@ -7,7 +7,7 @@ import io.reactivex.schedulers.Schedulers;
  * Created by Witold Sienski on 10.12.2017.
  */
 
-public class TestScheduler implements ISchedulerProvider  {
+public class TestScheduler implements ISchedulerFacade {
 
     @Override
     public Scheduler io() {

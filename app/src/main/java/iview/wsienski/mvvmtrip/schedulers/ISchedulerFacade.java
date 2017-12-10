@@ -8,7 +8,7 @@ import io.reactivex.Scheduler;
  * Created by Witold Sienski on 09.12.2017.
  */
 
-public interface ISchedulerProvider {
+public interface ISchedulerFacade {
 
     @NonNull
     Scheduler io();

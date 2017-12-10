@@ -12,7 +12,7 @@ import iview.wsienski.mvvmtrip.di.module.AppModule;
 
 public class MyApplication extends Application {
 
-    private static AppComponent appComponent;
+    private AppComponent appComponent;
 
 
     @Override
@@ -24,7 +24,7 @@ public class MyApplication extends Application {
                 .build();
     }
 
-    public static AppComponent getAppComponent() {
+    public AppComponent getAppComponent() {
         return appComponent;
     }
 

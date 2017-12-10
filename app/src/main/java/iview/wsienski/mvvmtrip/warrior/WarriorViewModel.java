@@ -6,7 +6,7 @@ import io.reactivex.Observable;
 import io.reactivex.subjects.BehaviorSubject;
 import iview.wsienski.mvvmtrip.datamodel.IRepository;
 import iview.wsienski.mvvmtrip.model.Warrior;
-import iview.wsienski.mvvmtrip.schedulers.ISchedulerProvider;
+import iview.wsienski.mvvmtrip.schedulers.ISchedulerFacade;
 
 /**
  * Created by Witold Sienski on 09.12.2017.
@@ -18,10 +18,10 @@ public class WarriorViewModel {
     
     private final BehaviorSubject<Warrior> mWarrior = BehaviorSubject.create();
 
-    private final ISchedulerProvider mSchedulerProvider;
+    private final ISchedulerFacade mSchedulerProvider;
 
     public WarriorViewModel(final IRepository model,
-                            final ISchedulerProvider schedulerProvider) {
+                            final ISchedulerFacade schedulerProvider) {
         mModel = model;
         mSchedulerProvider = schedulerProvider;
     }
