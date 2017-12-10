@@ -29,8 +29,8 @@ public class SchedulerProvider implements ISchedulerProvider {
 
     @Override
     @NonNull
-    public Scheduler computation() {
-        return Schedulers.computation();
+    public Scheduler io() {
+        return Schedulers.io();
     }
 
     @Override

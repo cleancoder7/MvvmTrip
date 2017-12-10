@@ -16,7 +16,7 @@ class MainViewModel {
 
     private final IModel mModel;
     
-    private final BehaviorSubject<Warrior> mWarriorLanguage = BehaviorSubject.create();
+    private final BehaviorSubject<Warrior> mWarrior = BehaviorSubject.create();
 
     private final ISchedulerProvider mSchedulerProvider;
 
@@ -28,8 +28,8 @@ class MainViewModel {
 
     
     public Observable<String> getStrength() {
-        return mWarriorLanguage
-                .observeOn(mSchedulerProvider.computation())
+        return mWarrior
+                .observeOn(mSchedulerProvider.io())
                 .map(Warrior::getmType)
                 .flatMap(mModel::getWarriorStrength);
     }
@@ -40,7 +40,7 @@ class MainViewModel {
     }
 
     public void selectWarrior(final Warrior warrior) {
-        mWarriorLanguage.onNext(warrior);
+        mWarrior.onNext(warrior);
     }
 
 }

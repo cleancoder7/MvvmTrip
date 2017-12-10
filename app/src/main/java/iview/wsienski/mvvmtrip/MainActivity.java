@@ -67,12 +67,12 @@ public class MainActivity extends AppCompatActivity {
         mCompositeDisposable = new CompositeDisposable();
 
         mCompositeDisposable.add(mViewModel.getStrength()
-                .subscribeOn(Schedulers.computation())
+                .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(this::setStrength));
 
         mCompositeDisposable.add(mViewModel.getWarriors()
-                .subscribeOn(Schedulers.computation())
+                .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(this::setWarriors));
     }

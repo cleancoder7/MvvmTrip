@@ -11,7 +11,7 @@ import io.reactivex.Scheduler;
 public interface ISchedulerProvider {
 
     @NonNull
-    Scheduler computation();
+    Scheduler io();
 
     @NonNull
     Scheduler ui();
