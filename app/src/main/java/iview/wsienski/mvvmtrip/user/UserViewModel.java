@@ -20,7 +20,7 @@ public class UserViewModel {
 
     public ObservableField<String> name = new ObservableField<>();
     public ObservableField<String> age = new ObservableField<>();
-    public ObservableField<String> isPremium = new ObservableField<>();
+    public ObservableField<Boolean> isPremium = new ObservableField<>();
 
 
     public UserViewModel(IRepository repository, ISchedulerFacade schedulerProvider) {
@@ -39,7 +39,7 @@ public class UserViewModel {
                                     Timber.d("get user " + user.getName());
                                     name.set(user.getName());
                                     age.set(String.valueOf(user.getAge()));
-                                    isPremium.set(user.isPremium() ? "Premium Account" : "Normal Account");
+                                    isPremium.set(user.isPremium());
                                 }
                         )
         );

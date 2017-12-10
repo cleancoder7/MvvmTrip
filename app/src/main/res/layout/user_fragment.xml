@@ -38,10 +38,18 @@
             android:id="@+id/isPremium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{viewModel.isPremium}"
+            android:text="Premium account:"
             app:layout_constraintLeft_toLeftOf="@id/name"
             app:layout_constraintRight_toRightOf="@id/name"
             app:layout_constraintTop_toBottomOf="@id/age"
-            tools:text="Premium" />
+            tools:text="Premium account: " />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="@{viewModel.isPremium}"
+            android:enabled="false"
+            app:layout_constraintBaseline_toBaselineOf="@id/isPremium"
+            app:layout_constraintLeft_toRightOf="@id/isPremium" />
     </android.support.constraint.ConstraintLayout>
 </layout>
