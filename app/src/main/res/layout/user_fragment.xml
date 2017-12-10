@@ -51,5 +51,23 @@
             android:enabled="false"
             app:layout_constraintBaseline_toBaselineOf="@id/isPremium"
             app:layout_constraintLeft_toRightOf="@id/isPremium" />
+
+
+        <EditText
+            android:id="@+id/inputEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={viewModel.email}"
+            app:layout_constraintTop_toBottomOf="@id/isPremium" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> viewModel.checkEmail()}"
+            android:text="Check email"
+            app:layout_constraintLeft_toLeftOf="@id/name"
+            app:layout_constraintRight_toRightOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@id/inputEmail"
+            tools:text="Email validation" />
     </android.support.constraint.ConstraintLayout>
 </layout>

@@ -1,6 +1,7 @@
 package iview.wsienski.mvvmtrip.user;
 
 import android.databinding.ObservableField;
+import android.text.TextUtils;
 
 import io.reactivex.disposables.CompositeDisposable;
 import iview.wsienski.mvvmtrip.datamodel.IRepository;
@@ -21,6 +22,7 @@ public class UserViewModel {
     public ObservableField<String> name = new ObservableField<>();
     public ObservableField<String> age = new ObservableField<>();
     public ObservableField<Boolean> isPremium = new ObservableField<>();
+    public ObservableField<String> email = new ObservableField<>();
 
 
     public UserViewModel(IRepository repository, ISchedulerFacade schedulerProvider) {
@@ -47,6 +49,13 @@ public class UserViewModel {
 
     public void unBind() {
         mCompositeDisposable.clear();
+    }
+
+    public void checkEmail() {
+        if (email == null || TextUtils.isEmpty(email.get()) || !email.get().contains("@"))
+            Timber.d("Email is INCORRECT");
+        else
+            Timber.d("Email is OK");
     }
 
 }
