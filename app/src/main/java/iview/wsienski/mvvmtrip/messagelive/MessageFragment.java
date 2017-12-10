@@ -2,7 +2,6 @@ package iview.wsienski.mvvmtrip.messagelive;
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,7 @@ import javax.inject.Inject;
 
 import iview.wsienski.mvvmtrip.MyApplication;
 import iview.wsienski.mvvmtrip.R;
+import iview.wsienski.mvvmtrip.base.BaseFragment;
 import iview.wsienski.mvvmtrip.base.ViewModelFactory;
 import timber.log.Timber;
 
@@ -19,7 +19,7 @@ import timber.log.Timber;
  * Created by Witold Sienski on 10.12.2017.
  */
 
-public class MessageFragment extends Fragment {
+public class MessageFragment extends BaseFragment {
 
     @Inject
     ViewModelFactory viewModelFactory;

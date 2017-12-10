@@ -2,23 +2,22 @@ package iview.wsienski.mvvmtrip.user;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import javax.inject.Inject;
 
 import iview.wsienski.mvvmtrip.MyApplication;
 import iview.wsienski.mvvmtrip.R;
+import iview.wsienski.mvvmtrip.base.BaseFragment;
 import iview.wsienski.mvvmtrip.databinding.UserFragmentBinding;
 
 /**
  * Created by Witold Sienski on 10.12.2017.
  */
 
-public class UserFragment extends Fragment implements UserNavigator {
+public class UserFragment extends BaseFragment implements UserNavigator {
 
     @Inject
     UserViewModel mViewModel;
@@ -67,10 +66,5 @@ public class UserFragment extends Fragment implements UserNavigator {
                 ? getString(R.string.email_correct)
                 : getString(R.string.email_incorrect);
         showToast(txt);
-    }
-
-    @Override
-    public void showToast(String txt) {
-        Toast.makeText(getContext(), txt, Toast.LENGTH_SHORT).show();
     }
 }

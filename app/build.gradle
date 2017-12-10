@@ -34,6 +34,8 @@ dependencies {
     //Rx Java 2
     implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroid"
     implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxJava"
+    //RxBinding
+    implementation "com.jakewharton.rxbinding2:rxbinding:$rootProject.rxBinding"
     //Dagger 2
     implementation "com.google.dagger:dagger-android:$rootProject.dagger2"
     implementation "com.google.dagger:dagger-android-support:$rootProject.dagger2"

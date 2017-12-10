@@ -8,14 +8,27 @@
 
     <Spinner
         android:id="@+id/warriors"
-        android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
 
     <TextView
         android:id="@+id/strength"
-        android:textSize="15sp"
-        android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/inputEmail"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnEmailCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Email validation in ViewModel"
+        tools:text="Email validation in ViewModel" />
 </LinearLayout>

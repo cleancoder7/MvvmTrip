@@ -1,13 +1,16 @@
 package iview.wsienski.mvvmtrip.warrior;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.jakewharton.rxbinding2.view.RxView;
 
 import java.util.List;
 
@@ -18,19 +21,23 @@ import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
 import iview.wsienski.mvvmtrip.MyApplication;
 import iview.wsienski.mvvmtrip.R;
+import iview.wsienski.mvvmtrip.base.BaseFragment;
 import iview.wsienski.mvvmtrip.model.Warrior;
 
 /**
  * Created by Witold Sienski on 10.12.2017.
  */
 
-public class WarriorFragment extends Fragment {
+public class WarriorFragment extends BaseFragment {
 
     private CompositeDisposable mCompositeDisposable;
 
     private TextView mStrengthView;
     private Spinner mWarriorsSpinner;
     private WarriorSpinnerAdapter mWarriorSpinnerAdapter;
+
+    private EditText mEmail;
+    private Button btnEmailCheck;
 
     @Inject
     WarriorViewModel mViewModel;
@@ -71,6 +78,8 @@ public class WarriorFragment extends Fragment {
     private void setupViews(View v) {
         mWarriorsSpinner = v.findViewById(R.id.warriors);
         mStrengthView = v.findViewById(R.id.strength);
+        mEmail = v.findViewById(R.id.inputEmail);
+        btnEmailCheck = v.findViewById(R.id.btnEmailCheck);
 
         assert mWarriorsSpinner != null;
         mWarriorsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -98,6 +107,17 @@ public class WarriorFragment extends Fragment {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(this::setWarriors));
+
+        mCompositeDisposable.add(
+                RxView.clicks(btnEmailCheck)
+                        .map(o -> mViewModel.checkEmail(mEmail.getText().toString()))
+                        .subscribe(isCorrect -> {
+                            String txt = isCorrect
+                                    ? getString(R.string.email_correct)
+                                    : getString(R.string.email_incorrect);
+                            showToast(txt);
+                        })
+        );
     }
 
     private void unBind() {

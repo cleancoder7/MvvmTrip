@@ -1,13 +1,13 @@
 package iview.wsienski.mvvmtrip.user;
 
 import android.databinding.ObservableField;
-import android.text.TextUtils;
 
 import io.reactivex.disposables.CompositeDisposable;
 import iview.wsienski.mvvmtrip.R;
 import iview.wsienski.mvvmtrip.datamodel.IRepository;
 import iview.wsienski.mvvmtrip.schedulers.ISchedulerFacade;
 import iview.wsienski.mvvmtrip.util.ResourcesUtil;
+import iview.wsienski.mvvmtrip.util.Validations;
 import timber.log.Timber;
 
 /**
@@ -58,7 +58,7 @@ public class UserViewModel {
     }
 
     public boolean checkEmail() {
-        return email != null && !TextUtils.isEmpty(email.get()) && email.get().contains("@");
+        return email != null && Validations.checkEmail(email.get());
     }
 
     //onclick in viewModel

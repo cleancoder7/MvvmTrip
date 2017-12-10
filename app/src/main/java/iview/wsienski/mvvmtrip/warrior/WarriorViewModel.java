@@ -7,6 +7,7 @@ import io.reactivex.subjects.BehaviorSubject;
 import iview.wsienski.mvvmtrip.datamodel.IRepository;
 import iview.wsienski.mvvmtrip.model.Warrior;
 import iview.wsienski.mvvmtrip.schedulers.ISchedulerFacade;
+import iview.wsienski.mvvmtrip.util.Validations;
 
 /**
  * Created by Witold Sienski on 09.12.2017.
@@ -43,4 +44,7 @@ public class WarriorViewModel {
         mWarrior.onNext(warrior);
     }
 
+    public boolean checkEmail(String email) {
+        return Validations.checkEmail(email);
+    }
 }
