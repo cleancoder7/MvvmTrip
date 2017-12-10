@@ -22,10 +22,13 @@ allprojects {
 }
 
 ext {
-    RxAndroid = '2.0.1'
-    RxJava = '2.1.7'
-    Dagger2 = '2.13'
-    Mockito = '2.13.0'
+    rxAndroid = '2.0.1'
+    rxJava = '2.1.7'
+    dagger2 = '2.13'
+    archLifecycleRuntimeVersion = '1.0.3'
+    archLifecycleVersion = '1.0.0'
+    timber = '4.6.0'
+    mockito = '2.13.0'
 }
 
 task clean(type: Delete) {

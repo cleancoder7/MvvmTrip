@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="naviagtor"
+            type="iview.wsienski.mvvmtrip.menu.MenuFragment" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/mvvm_rxjava"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MVVM RxJava"
+            android:onClick="@{naviagtor.goToMvvmRxJava}"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <Button
+            android:id="@+id/mvvm_livedata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MVVM LiveData"
+            android:onClick="@{naviagtor.gotToMvvmLiveData}"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mvvm_rxjava" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

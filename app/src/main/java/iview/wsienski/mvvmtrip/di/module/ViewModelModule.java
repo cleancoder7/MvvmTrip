@@ -4,6 +4,7 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import iview.wsienski.mvvmtrip.base.ViewModelFactory;
 import iview.wsienski.mvvmtrip.datamodel.IRepository;
 import iview.wsienski.mvvmtrip.schedulers.ISchedulerFacade;
 import iview.wsienski.mvvmtrip.warrior.WarriorViewModel;
@@ -18,6 +19,11 @@ public class ViewModelModule {
     @Singleton
     WarriorViewModel provideWarriorViewModel(IRepository repository, ISchedulerFacade schedulerProvider) {
         return new WarriorViewModel(repository, schedulerProvider);
+    }
+
+    @Provides
+    ViewModelFactory provideViewModelFactory(IRepository repository) {
+        return new ViewModelFactory(repository);
     }
 
 }

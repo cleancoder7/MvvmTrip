@@ -17,6 +17,10 @@ android {
         }
     }
 
+    dataBinding {
+        enabled = true
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -28,15 +32,21 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     //Rx Java 2
-    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.RxAndroid"
-    implementation "io.reactivex.rxjava2:rxjava:$rootProject.RxJava"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroid"
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxJava"
     //Dagger 2
-    implementation "com.google.dagger:dagger-android:$rootProject.Dagger2"
-    implementation "com.google.dagger:dagger-android-support:$rootProject.Dagger2"
-    annotationProcessor "com.google.dagger:dagger-android-processor:$rootProject.Dagger2"
-    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.Dagger2"
+    implementation "com.google.dagger:dagger-android:$rootProject.dagger2"
+    implementation "com.google.dagger:dagger-android-support:$rootProject.dagger2"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$rootProject.dagger2"
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2"
+    //LifeCycle
+    implementation "android.arch.lifecycle:runtime:$rootProject.archLifecycleRuntimeVersion"
+    implementation "android.arch.lifecycle:extensions:$rootProject.archLifecycleVersion"
+    annotationProcessor "android.arch.lifecycle:compiler:$rootProject.archLifecycleVersion"
+    //Timber
+    implementation "com.jakewharton.timber:timber:$rootProject.timber"
     //Mockito
-    testImplementation "org.mockito:mockito-core:$rootProject.Mockito"
+    testImplementation "org.mockito:mockito-core:$rootProject.mockito"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'

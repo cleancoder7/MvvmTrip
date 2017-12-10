@@ -62,6 +62,12 @@ public class WarriorFragment extends Fragment {
         return v;
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        unBind();
+    }
+
     private void setupViews(View v) {
         mWarriorsSpinner = v.findViewById(R.id.warriors);
         mStrengthView = v.findViewById(R.id.strength);
@@ -78,12 +84,6 @@ public class WarriorFragment extends Fragment {
             public void onNothingSelected(final AdapterView<?> parent) {
             }
         });
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        unBind();
     }
 
     private void bind() {
