@@ -18,10 +18,11 @@ public class UserViewModel {
     private ISchedulerFacade mSchedulerFacade;
 
     private CompositeDisposable mCompositeDisposable = new CompositeDisposable();
-
+    //Output
     public ObservableField<String> name = new ObservableField<>();
     public ObservableField<String> age = new ObservableField<>();
     public ObservableField<Boolean> isPremium = new ObservableField<>();
+    //Input
     public ObservableField<String> email = new ObservableField<>();
 
 
@@ -51,11 +52,8 @@ public class UserViewModel {
         mCompositeDisposable.clear();
     }
 
-    public void checkEmail() {
-        if (email == null || TextUtils.isEmpty(email.get()) || !email.get().contains("@"))
-            Timber.d("Email is INCORRECT");
-        else
-            Timber.d("Email is OK");
+    public boolean checkEmail() {
+        return email != null && !TextUtils.isEmpty(email.get()) && email.get().contains("@");
     }
 
 }

@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import javax.inject.Inject;
 
@@ -17,7 +18,7 @@ import iview.wsienski.mvvmtrip.databinding.UserFragmentBinding;
  * Created by Witold Sienski on 10.12.2017.
  */
 
-public class UserFragment extends Fragment {
+public class UserFragment extends Fragment implements UserNavigator {
 
     @Inject
     UserViewModel mViewModel;
@@ -47,6 +48,7 @@ public class UserFragment extends Fragment {
                 inflater, R.layout.user_fragment, container, false);
 
         binding.setViewModel(mViewModel);
+        binding.setNavigator(this);
 
         return binding.getRoot();
     }
@@ -55,5 +57,14 @@ public class UserFragment extends Fragment {
     public void onDestroy() {
         super.onDestroy();
         mViewModel.unBind();
+    }
+
+    @Override
+    public void checkBtnOnClick() {
+        if (mViewModel.checkEmail()) {
+            Toast.makeText(getContext(), "Email is correct", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(getContext(), "Email is incorrect", Toast.LENGTH_SHORT).show();
+        }
     }
 }
