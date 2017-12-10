@@ -14,7 +14,7 @@ import io.reactivex.observers.TestObserver;
 import iview.wsienski.mvvmtrip.datamodel.IRepository;
 import iview.wsienski.mvvmtrip.model.Warrior;
 import iview.wsienski.mvvmtrip.schedulers.TestScheduler;
-import iview.wsienski.mvvmtrip.warrior.WarriorViewModel;
+import iview.wsienski.mvvmtrip.ui.warrior.WarriorViewModel;
 
 /**
  * Created by Witold Sienski on 10.12.2017.

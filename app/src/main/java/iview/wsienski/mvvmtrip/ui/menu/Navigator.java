@@ -1,4 +1,4 @@
-package iview.wsienski.mvvmtrip.menu;
+package iview.wsienski.mvvmtrip.ui.menu;
 
 import android.view.View;
 

@@ -1,4 +1,4 @@
-package iview.wsienski.mvvmtrip.warrior;
+package iview.wsienski.mvvmtrip.ui.warrior;
 
 import android.content.Context;
 import android.view.LayoutInflater;

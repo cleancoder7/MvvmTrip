@@ -8,10 +8,10 @@ import iview.wsienski.mvvmtrip.di.module.AppModule;
 import iview.wsienski.mvvmtrip.di.module.RepositoryModule;
 import iview.wsienski.mvvmtrip.di.module.SchedulerModule;
 import iview.wsienski.mvvmtrip.di.module.ViewModelModule;
-import iview.wsienski.mvvmtrip.messagelive.MessageFragment;
-import iview.wsienski.mvvmtrip.user.UserFragment;
-import iview.wsienski.mvvmtrip.warrior.WarriorActivity;
-import iview.wsienski.mvvmtrip.warrior.WarriorFragment;
+import iview.wsienski.mvvmtrip.ui.messagelive.MessageFragment;
+import iview.wsienski.mvvmtrip.ui.user.UserFragment;
+import iview.wsienski.mvvmtrip.ui.warrior.WarriorActivity;
+import iview.wsienski.mvvmtrip.ui.warrior.WarriorFragment;
 
 /**
  * Created by Witold Sienski on 10.12.2017.

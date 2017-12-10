@@ -3,5 +3,5 @@
     android:id="@+id/root_activity_user"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".user.UserActivity"
+    tools:context=".ui.user.UserActivity"
     />

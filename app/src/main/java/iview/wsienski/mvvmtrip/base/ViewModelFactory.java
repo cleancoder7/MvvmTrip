@@ -6,7 +6,7 @@ import android.arch.lifecycle.ViewModelProvider;
 import javax.inject.Singleton;
 
 import iview.wsienski.mvvmtrip.datamodel.IRepository;
-import iview.wsienski.mvvmtrip.messagelive.MessageViewModel;
+import iview.wsienski.mvvmtrip.ui.messagelive.MessageViewModel;
 import iview.wsienski.mvvmtrip.schedulers.ISchedulerFacade;
 
 /**

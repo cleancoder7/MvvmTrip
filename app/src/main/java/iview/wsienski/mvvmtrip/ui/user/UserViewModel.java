@@ -1,4 +1,4 @@
-package iview.wsienski.mvvmtrip.user;
+package iview.wsienski.mvvmtrip.ui.user;
 
 import android.databinding.ObservableField;
 

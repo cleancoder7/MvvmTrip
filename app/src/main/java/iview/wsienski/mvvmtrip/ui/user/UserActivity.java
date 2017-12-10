@@ -1,4 +1,4 @@
-package iview.wsienski.mvvmtrip.messagelive;
+package iview.wsienski.mvvmtrip.ui.user;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -10,28 +10,29 @@ import iview.wsienski.mvvmtrip.base.BaseActivity;
  * Created by Witold Sienski on 10.12.2017.
  */
 
-public class MessageLiveActivity extends BaseActivity {
+public class UserActivity extends BaseActivity {
 
-    private static final String MESSAGE_FRAGMENT = "MESSAGE_FRAGMENT";
+    private static final String USER_FRAGMENT = "USER_FRAGMENT";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.message_activity);
+        setContentView(R.layout.user_activity);
 
         FragmentManager manager = getSupportFragmentManager();
 
-        MessageFragment fragment = (MessageFragment) manager.findFragmentByTag(MESSAGE_FRAGMENT);
+        UserFragment fragment = (UserFragment) manager.findFragmentByTag(USER_FRAGMENT);
 
         if (fragment == null) {
-            fragment = MessageFragment.newInstance();
+            fragment = UserFragment.newInstance();
         }
 
         addFragmentToActivity(manager,
                 fragment,
-                R.id.root_activity_message,
-                MESSAGE_FRAGMENT
+                R.id.root_activity_user,
+                USER_FRAGMENT
         );
 
     }
+
 }

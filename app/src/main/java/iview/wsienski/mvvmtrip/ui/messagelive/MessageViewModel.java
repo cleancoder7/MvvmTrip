@@ -1,4 +1,4 @@
-package iview.wsienski.mvvmtrip.messagelive;
+package iview.wsienski.mvvmtrip.ui.messagelive;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;

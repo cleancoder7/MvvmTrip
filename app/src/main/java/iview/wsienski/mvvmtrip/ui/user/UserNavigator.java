@@ -1,4 +1,4 @@
-package iview.wsienski.mvvmtrip.user;
+package iview.wsienski.mvvmtrip.ui.user;
 
 /**
  * Created by Witold Sienski on 10.12.2017.

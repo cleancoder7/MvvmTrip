@@ -1,4 +1,4 @@
-package iview.wsienski.mvvmtrip.warrior;
+package iview.wsienski.mvvmtrip.ui.warrior;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;

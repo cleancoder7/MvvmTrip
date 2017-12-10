@@ -7,11 +7,11 @@
 
         <variable
             name="viewModel"
-            type="iview.wsienski.mvvmtrip.user.UserViewModel" />
+            type="iview.wsienski.mvvmtrip.ui.user.UserViewModel" />
 
         <variable
             name="navigator"
-            type="iview.wsienski.mvvmtrip.user.UserNavigator" />
+            type="iview.wsienski.mvvmtrip.ui.user.UserNavigator" />
     </data>
 
     <android.support.constraint.ConstraintLayout

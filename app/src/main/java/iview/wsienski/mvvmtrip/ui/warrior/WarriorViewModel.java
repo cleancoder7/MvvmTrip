@@ -1,4 +1,4 @@
-package iview.wsienski.mvvmtrip.warrior;
+package iview.wsienski.mvvmtrip.ui.warrior;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package iview.wsienski.mvvmtrip.menu;
+package iview.wsienski.mvvmtrip.ui.menu;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 import iview.wsienski.mvvmtrip.R;
 import iview.wsienski.mvvmtrip.base.BaseFragment;
 import iview.wsienski.mvvmtrip.databinding.MenuFragmentBinding;
-import iview.wsienski.mvvmtrip.messagelive.MessageLiveActivity;
-import iview.wsienski.mvvmtrip.user.UserActivity;
-import iview.wsienski.mvvmtrip.warrior.WarriorActivity;
+import iview.wsienski.mvvmtrip.ui.messagelive.MessageLiveActivity;
+import iview.wsienski.mvvmtrip.ui.user.UserActivity;
+import iview.wsienski.mvvmtrip.ui.warrior.WarriorActivity;
 import timber.log.Timber;
 
 /**

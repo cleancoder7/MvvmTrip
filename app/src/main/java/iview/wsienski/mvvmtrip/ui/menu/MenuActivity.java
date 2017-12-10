@@ -1,4 +1,4 @@
-package iview.wsienski.mvvmtrip.menu;
+package iview.wsienski.mvvmtrip.ui.menu;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
