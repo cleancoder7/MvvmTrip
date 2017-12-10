@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
@@ -20,18 +22,19 @@ public class WarriorActivity extends AppCompatActivity {
 
     private CompositeDisposable mCompositeDisposable;
 
-    private WarriorViewModel mViewModel;
-
     private TextView mStrengthView;
     private Spinner mWarriorsSpinner;
     private WarriorSpinnerAdapter mWarriorSpinnerAdapter;
+
+    @Inject
+    WarriorViewModel mViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.warrior_activity);
 
-        mViewModel = getViewModel();
+        MyApplication.getAppComponent().inject(this);
         setupViews();
     }
 
@@ -96,11 +99,6 @@ public class WarriorActivity extends AppCompatActivity {
                 R.layout.warrior_item,
                 Warriors);
         mWarriorsSpinner.setAdapter(mWarriorSpinnerAdapter);
-    }
-
-
-    private WarriorViewModel getViewModel() {
-        return ((MyApplication) getApplication()).getViewModel();
     }
 
     private void itemSelected(final int position) {
