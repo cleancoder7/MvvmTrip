@@ -17,13 +17,11 @@ import iview.wsienski.mvvmtrip.warrior.WarriorViewModel;
 public class ViewModelModule {
 
     @Provides
-    @Singleton
     WarriorViewModel provideWarriorViewModel(IRepository repository, ISchedulerFacade schedulerProvider) {
         return new WarriorViewModel(repository, schedulerProvider);
     }
 
     @Provides
-    @Singleton
     UserViewModel provideUserViewModel(IRepository repository, ISchedulerFacade schedulerProvider) {
         return new UserViewModel(repository, schedulerProvider);
     }
