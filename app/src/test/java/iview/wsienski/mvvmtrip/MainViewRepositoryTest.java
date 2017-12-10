@@ -11,32 +11,33 @@ import java.util.List;
 
 import io.reactivex.Observable;
 import io.reactivex.observers.TestObserver;
-import iview.wsienski.mvvmtrip.datamodel.IModel;
+import iview.wsienski.mvvmtrip.datamodel.IRepository;
 import iview.wsienski.mvvmtrip.model.Warrior;
 import iview.wsienski.mvvmtrip.schedulers.TestScheduler;
+import iview.wsienski.mvvmtrip.warrior.WarriorViewModel;
 
 /**
  * Created by Witold Sienski on 10.12.2017.
  */
 
-public class MainViewModelTest {
+public class MainViewRepositoryTest {
 
     @Mock
-    private IModel mModel;
+    private IRepository mModel;
 
-    private MainViewModel mMainViewModel;
+    private WarriorViewModel mWarriorViewModel;
 
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
 
-        mMainViewModel = new MainViewModel(mModel, new TestScheduler());
+        mWarriorViewModel = new WarriorViewModel(mModel, new TestScheduler());
     }
 
     @Test
     public void testGetWarriors_doesNotEmit_whenNoWarriorSet() {
         TestObserver<String> testObserver = new TestObserver<>();
-        mMainViewModel.getStrength().subscribe(testObserver);
+        mWarriorViewModel.getStrength().subscribe(testObserver);
 
         testObserver.assertNoErrors();
         testObserver.assertNoValues();
@@ -49,9 +50,9 @@ public class MainViewModelTest {
         Mockito.when(mModel.getWarriorStrength(Warrior.WarriorType.INFANTRY))
                 .thenReturn(Observable.just(strength));
         TestObserver<String> testObserver = new TestObserver<>();
-        mMainViewModel.getStrength().subscribe(testObserver);
+        mWarriorViewModel.getStrength().subscribe(testObserver);
 
-        mMainViewModel.selectWarrior(one);
+        mWarriorViewModel.selectWarrior(one);
 
         testObserver.assertNoErrors();
         testObserver.assertValue(strength);
@@ -65,7 +66,7 @@ public class MainViewModelTest {
         Mockito.when(mModel.getWarriorsObservable()).thenReturn(Observable.just(warriors));
         TestObserver<List<Warrior>> testObserver = new TestObserver<>();
 
-        mMainViewModel.getWarriors().subscribe(testObserver);
+        mWarriorViewModel.getWarriors().subscribe(testObserver);
 
         testObserver.assertNoErrors();
         testObserver.assertValue(warriors);

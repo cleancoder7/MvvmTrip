@@ -2,10 +2,11 @@ package iview.wsienski.mvvmtrip;
 
 import android.app.Application;
 
-import iview.wsienski.mvvmtrip.datamodel.IModel;
-import iview.wsienski.mvvmtrip.datamodel.Model;
+import iview.wsienski.mvvmtrip.datamodel.IRepository;
+import iview.wsienski.mvvmtrip.datamodel.Repository;
 import iview.wsienski.mvvmtrip.schedulers.ISchedulerProvider;
 import iview.wsienski.mvvmtrip.schedulers.SchedulerProvider;
+import iview.wsienski.mvvmtrip.warrior.WarriorViewModel;
 
 /**
  * Created by Witold Sienski on 09.12.2017.
@@ -13,13 +14,13 @@ import iview.wsienski.mvvmtrip.schedulers.SchedulerProvider;
 
 public class MyApplication extends Application {
 
-    private final IModel model;
+    private final IRepository model;
 
     public MyApplication() {
-        model = new Model();
+        model = new Repository();
     }
 
-    public IModel getModel() {
+    public IRepository getModel() {
         return model;
     }
 
@@ -27,8 +28,8 @@ public class MyApplication extends Application {
         return SchedulerProvider.getInstance();
     }
 
-    public MainViewModel getViewModel() {
-        return new MainViewModel(getModel(), getSchedulerProvider());
+    public WarriorViewModel getViewModel() {
+        return new WarriorViewModel(getModel(), getSchedulerProvider());
     }
 
 

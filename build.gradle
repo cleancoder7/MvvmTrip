@@ -24,6 +24,7 @@ allprojects {
 ext {
     RxAndroid = '2.0.1'
     RxJava = '2.1.7'
+    Dagger2 = '2.13'
     Mockito = '2.13.0'
 }
 

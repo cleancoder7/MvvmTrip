@@ -10,21 +10,11 @@ import iview.wsienski.mvvmtrip.model.Warrior;
  * Created by Witold Sienski on 09.12.2017.
  */
 
-public class Model implements IModel {
+public class Repository implements IRepository {
 
     @Override
     public Observable<List<Warrior>> getWarriorsObservable() {
         return Observable.fromCallable(this::getWarriors);
-    }
-
-    @Override
-    public List<Warrior> getWarriors() {
-        return Arrays
-                .asList(
-                        new Warrior("Shield Bearer", Warrior.WarriorType.INFANTRY),
-                        new Warrior("Hussar", Warrior.WarriorType.CAVALRY),
-                        new Warrior("Normal cannon", Warrior.WarriorType.CANNON)
-                );
     }
 
     @Override
@@ -39,5 +29,14 @@ public class Model implements IModel {
             default:
                 return Observable.empty();
         }
+    }
+
+    private List<Warrior> getWarriors() {
+        return Arrays
+                .asList(
+                        new Warrior("Shield Bearer", Warrior.WarriorType.INFANTRY),
+                        new Warrior("Hussar", Warrior.WarriorType.CAVALRY),
+                        new Warrior("Normal cannon", Warrior.WarriorType.CANNON)
+                );
     }
 }

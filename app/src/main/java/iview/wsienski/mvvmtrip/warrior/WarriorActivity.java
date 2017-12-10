@@ -1,4 +1,4 @@
-package iview.wsienski.mvvmtrip;
+package iview.wsienski.mvvmtrip.warrior;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,13 +12,15 @@ import java.util.List;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
+import iview.wsienski.mvvmtrip.MyApplication;
+import iview.wsienski.mvvmtrip.R;
 import iview.wsienski.mvvmtrip.model.Warrior;
 
-public class MainActivity extends AppCompatActivity {
+public class WarriorActivity extends AppCompatActivity {
 
     private CompositeDisposable mCompositeDisposable;
 
-    private MainViewModel mViewModel;
+    private WarriorViewModel mViewModel;
 
     private TextView mStrengthView;
     private Spinner mWarriorsSpinner;
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.warrior_activity);
 
         mViewModel = getViewModel();
         setupViews();
@@ -97,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private MainViewModel getViewModel() {
+    private WarriorViewModel getViewModel() {
         return ((MyApplication) getApplication()).getViewModel();
     }
 

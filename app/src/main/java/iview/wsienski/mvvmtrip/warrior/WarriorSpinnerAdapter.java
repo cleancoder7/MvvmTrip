@@ -1,4 +1,4 @@
-package iview.wsienski.mvvmtrip;
+package iview.wsienski.mvvmtrip.warrior;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import iview.wsienski.mvvmtrip.R;
 import iview.wsienski.mvvmtrip.model.Warrior;
 
 /**
