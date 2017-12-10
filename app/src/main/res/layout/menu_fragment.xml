@@ -17,8 +17,8 @@
             android:id="@+id/mvvm_rxjava"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MVVM RxJava"
             android:onClick="@{naviagtor::goToMvvmRxJava}"
+            android:text="MVVM RxJava"
             app:layout_constraintLeft_toRightOf="parent"
             app:layout_constraintRight_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="parent" />
@@ -27,11 +27,21 @@
             android:id="@+id/mvvm_livedata"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MVVM LiveData"
             android:onClick="@{naviagtor::gotToMvvmLiveData}"
+            android:text="MVVM LiveData"
             app:layout_constraintLeft_toRightOf="parent"
             app:layout_constraintRight_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/mvvm_rxjava" />
+
+        <Button
+            android:id="@+id/mvvm_databinding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{naviagtor::gotToMvvmDataBinding}"
+            android:text="MVVM DataBinding"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mvvm_livedata" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>

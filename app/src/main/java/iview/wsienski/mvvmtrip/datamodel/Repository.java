@@ -5,6 +5,7 @@ import java.util.List;
 
 import io.reactivex.Observable;
 import iview.wsienski.mvvmtrip.model.Message;
+import iview.wsienski.mvvmtrip.model.User;
 import iview.wsienski.mvvmtrip.model.Warrior;
 
 /**
@@ -12,6 +13,11 @@ import iview.wsienski.mvvmtrip.model.Warrior;
  */
 
 public class Repository implements IRepository {
+
+    @Override
+    public Observable<User> getUser() {
+        return Observable.just(new User("John", 21, true));
+    }
 
     @Override
     public Observable<Message> getMessage() {

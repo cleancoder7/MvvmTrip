@@ -4,6 +4,7 @@ import java.util.List;
 
 import io.reactivex.Observable;
 import iview.wsienski.mvvmtrip.model.Message;
+import iview.wsienski.mvvmtrip.model.User;
 import iview.wsienski.mvvmtrip.model.Warrior;
 
 /**
@@ -11,6 +12,8 @@ import iview.wsienski.mvvmtrip.model.Warrior;
  */
 
 public interface IRepository {
+
+    Observable<User> getUser();
 
     Observable<Message> getMessage();
 

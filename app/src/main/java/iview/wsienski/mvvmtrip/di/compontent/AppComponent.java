@@ -9,6 +9,7 @@ import iview.wsienski.mvvmtrip.di.module.RepositoryModule;
 import iview.wsienski.mvvmtrip.di.module.SchedulerModule;
 import iview.wsienski.mvvmtrip.di.module.ViewModelModule;
 import iview.wsienski.mvvmtrip.messagelive.MessageFragment;
+import iview.wsienski.mvvmtrip.user.UserFragment;
 import iview.wsienski.mvvmtrip.warrior.WarriorActivity;
 import iview.wsienski.mvvmtrip.warrior.WarriorFragment;
 
@@ -29,4 +30,6 @@ public interface AppComponent {
     void inject(WarriorFragment warriorFragment);
 
     void inject(MessageFragment messageFragment);
+
+    void inject(UserFragment userFragment);
 }

@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".warrior.WarriorActivity" />
         <activity android:name=".messagelive.MessageLiveActivity" />
+        <activity android:name=".user.UserActivity" />
     </application>
 
 </manifest>

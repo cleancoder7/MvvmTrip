@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import iview.wsienski.mvvmtrip.R;
 import iview.wsienski.mvvmtrip.databinding.MenuFragmentBinding;
 import iview.wsienski.mvvmtrip.messagelive.MessageLiveActivity;
+import iview.wsienski.mvvmtrip.user.UserActivity;
 import iview.wsienski.mvvmtrip.warrior.WarriorActivity;
 import timber.log.Timber;
 
@@ -48,5 +49,10 @@ public class MenuFragment extends Fragment implements Navigator {
     @Override
     public void gotToMvvmLiveData(View view) {
         startActivity(new Intent(getContext(), MessageLiveActivity.class));
+    }
+
+    @Override
+    public void gotToMvvmDataBinding(View view) {
+        startActivity(new Intent(getContext(), UserActivity.class));
     }
 }

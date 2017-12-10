@@ -26,14 +26,14 @@ public class MessageViewModel extends BaseViewModel {
         this.mSchedulerFacade = iSchedulerFacade;
 
         messageLiveData = new MutableLiveData<>();
-        getMessage();
+        loadMessage();
     }
 
     public LiveData<Message> getMessageLiveData() {
         return messageLiveData;
     }
 
-    public void getMessage() {
+    public void loadMessage() {
         getCompositeDisposable().add(mRepository.getMessage()
                 .subscribeOn(mSchedulerFacade.io())
                 .observeOn(mSchedulerFacade.ui())

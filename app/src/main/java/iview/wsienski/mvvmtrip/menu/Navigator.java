@@ -9,4 +9,6 @@ import android.view.View;
 public interface Navigator {
     void goToMvvmRxJava(View view);
     void gotToMvvmLiveData(View view);
+
+    void gotToMvvmDataBinding(View view);
 }
