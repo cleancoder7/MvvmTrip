@@ -1,4 +1,4 @@
-package iview.wsienski.mvvmtrip;
+package iview.wsienski.mvvmtrip.ui.warrior;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -14,7 +14,6 @@ import io.reactivex.observers.TestObserver;
 import iview.wsienski.mvvmtrip.datamodel.IRepository;
 import iview.wsienski.mvvmtrip.model.Warrior;
 import iview.wsienski.mvvmtrip.schedulers.TestScheduler;
-import iview.wsienski.mvvmtrip.ui.warrior.WarriorViewModel;
 
 /**
  * Created by Witold Sienski on 10.12.2017.

@@ -1,4 +1,4 @@
-package iview.wsienski.mvvmtrip;
+package iview.wsienski.mvvmtrip.ui.user;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -8,11 +8,10 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import io.reactivex.internal.operators.observable.ObservableScan;
+import iview.wsienski.mvvmtrip.R;
 import iview.wsienski.mvvmtrip.datamodel.IRepository;
 import iview.wsienski.mvvmtrip.model.User;
 import iview.wsienski.mvvmtrip.schedulers.TestScheduler;
-import iview.wsienski.mvvmtrip.ui.user.IUserNavigator;
-import iview.wsienski.mvvmtrip.ui.user.UserViewModel;
 import iview.wsienski.mvvmtrip.util.ResourcesUtil;
 
 import static org.mockito.Mockito.verify;

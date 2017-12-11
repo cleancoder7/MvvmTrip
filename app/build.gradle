@@ -25,13 +25,19 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    //Rx Java 2
+    //Rx Java 2gra
     implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroid"
     implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxJava"
     //RxBinding
@@ -50,6 +56,8 @@ dependencies {
     implementation "com.jakewharton.timber:timber:$rootProject.timber"
     //Mockito
     testImplementation "org.mockito:mockito-core:$rootProject.mockito"
+    //Robolectric
+    testImplementation "org.robolectric:robolectric:$rootProject.robolectric"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'

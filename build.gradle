@@ -30,6 +30,7 @@ ext {
     archLifecycleVersion = '1.0.0'
     timber = '4.6.0'
     mockito = '2.13.0'
+    robolectric = '3.5.1'
 }
 
 task clean(type: Delete) {
