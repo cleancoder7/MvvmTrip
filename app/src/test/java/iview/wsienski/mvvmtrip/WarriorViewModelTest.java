@@ -20,7 +20,7 @@ import iview.wsienski.mvvmtrip.ui.warrior.WarriorViewModel;
  * Created by Witold Sienski on 10.12.2017.
  */
 
-public class MainViewRepositoryTest {
+public class WarriorViewModelTest {
 
     @Mock
     private IRepository mModel;

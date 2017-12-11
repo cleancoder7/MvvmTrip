@@ -1,7 +1,5 @@
 package iview.wsienski.mvvmtrip.util;
 
-import android.text.TextUtils;
-
 /**
  * Created by Witold Sienski on 10.12.2017.
  */
@@ -9,6 +7,10 @@ import android.text.TextUtils;
 public class Validations {
 
     public static boolean checkEmail(String email) {
-        return !TextUtils.isEmpty(email) && email.contains("@");
+        return !isEmpty(email) && email.contains("@");
+    }
+
+    private static boolean isEmpty(String email) {
+        return email == null || email.length() <= 0;
     }
 }

@@ -11,7 +11,7 @@
 
         <variable
             name="navigator"
-            type="iview.wsienski.mvvmtrip.ui.user.UserNavigator" />
+            type="iview.wsienski.mvvmtrip.ui.user.IUserNavigator" />
     </data>
 
     <android.support.constraint.ConstraintLayout

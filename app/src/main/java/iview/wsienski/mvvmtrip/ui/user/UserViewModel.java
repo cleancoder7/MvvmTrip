@@ -26,17 +26,16 @@ public class UserViewModel {
     private IRepository mRepository;
     private ISchedulerFacade mSchedulerFacade;
     private CompositeDisposable mCompositeDisposable = new CompositeDisposable();
-    private UserFragment navigator;
+    private IUserNavigator navigator;
 
 
     public UserViewModel(IRepository repository, ISchedulerFacade schedulerProvider, ResourcesUtil resourcesUtil) {
         this.mRepository = repository;
         this.mSchedulerFacade = schedulerProvider;
         this.mResourcesUtil = resourcesUtil;
-        loadUser();
     }
 
-    private void loadUser() {
+    public void loadUser() {
         mCompositeDisposable.add(
                 mRepository.getUser()
                         .subscribeOn(mSchedulerFacade.io())
@@ -69,7 +68,7 @@ public class UserViewModel {
     }
 
     //onclick in viewModel
-    public void setNavigator(UserFragment navigator) {
+    public void setNavigator(IUserNavigator navigator) {
         this.navigator = navigator;
     }
 }

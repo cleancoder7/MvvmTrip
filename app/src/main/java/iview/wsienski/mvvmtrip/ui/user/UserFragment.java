@@ -17,7 +17,7 @@ import iview.wsienski.mvvmtrip.databinding.UserFragmentBinding;
  * Created by Witold Sienski on 10.12.2017.
  */
 
-public class UserFragment extends BaseFragment implements UserNavigator {
+public class UserFragment extends BaseFragment implements IUserNavigator {
 
     @Inject
     UserViewModel mViewModel;
@@ -51,6 +51,7 @@ public class UserFragment extends BaseFragment implements UserNavigator {
         binding.setNavigator(this);
         //onclick in ViewModel
         mViewModel.setNavigator(this);
+        mViewModel.loadUser();
         return binding.getRoot();
     }
 
