@@ -1,5 +1,10 @@
 # MvvmTrip
-MVVM in Android and compare three different options RxJava&amp;RxBinding vs RxJava&amp;DataBinding vs LiveData&amp;ArchitectureCompontent
+MVVM in Android and compare three different options:
+<ul>
+<li>RxJava&amp;RxBinding - .user package</li>
+<li>RxJava&amp;DataBinding - .warrior package</li>
+<li>LiveData&amp;ArchitectureCompontent - .messagelive package</li>
+</ul>
 
 Libraries used:
 <ul>
