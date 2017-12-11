@@ -9,11 +9,10 @@ MVVM in Android and compare three different options:
 Libraries used:
 <ul>
   <li>rxAndroid = '2.0.1'</li>
-  <li>rxJava = '2.1.7'</li>
+  <li>rxJava2 = '2.1.7'</li>
       <li>rxBinding = '2.0.0'</li>
       <li>dagger2 = '2.13'</li>
-      <li>archLifecycleRuntimeVersion = '1.0.3</li>
-      <li>archLifecycleVersion = '1.0.0'</li>
+      <li>Arichitecture Componenes (LifeCycle, LiveData, ViewModel) = '1.0.0'</li>
       <li>timber = '4.6.0'</li>
       <li>mockito = '2.13.0'</li>
    <li>robolectric = '3.5.1'</li>
