@@ -16,6 +16,8 @@ Libraries used:
       <li>archLifecycleVersion = '1.0.0'</li>
       <li>timber = '4.6.0'</li>
       <li>mockito = '2.13.0'</li>
+   <li>robolectric = '3.5.1'</li>
+<li>espresso = '3.0.1'</li>
 </ul>
  
 Patterns:
