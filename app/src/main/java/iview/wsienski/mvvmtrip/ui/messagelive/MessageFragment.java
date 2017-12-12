@@ -58,6 +58,8 @@ public class MessageFragment extends BaseFragment {
         messageViewModel = ViewModelProviders.of(this, viewModelFactory)
                 .get(MessageViewModel.class);
 
+        messageViewModel.loadMessage();
+
         messageViewModel.getMessageLiveData().observe(this, message -> {
             Timber.d("View get msg %s", message.getTitle());
             setTitle(message.getTitle());

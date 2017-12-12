@@ -27,7 +27,6 @@ public class MessageViewModel extends BaseViewModel {
         this.mSchedulerFacade = iSchedulerFacade;
 
         messageLiveData = new MutableLiveData<>();
-        loadMessage();
     }
 
     public LiveData<Message> getMessageLiveData() {
@@ -42,7 +41,9 @@ public class MessageViewModel extends BaseViewModel {
                         message -> {
                             Timber.d("get msg " + message.getTitle());
                             messageLiveData.setValue(message);
-                        }
+                        },
+                        throwable -> Timber.d(throwable)
+
                 )
         );
     }
