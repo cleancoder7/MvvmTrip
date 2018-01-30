@@ -10,6 +10,7 @@ import android.widget.Toast;
 public class BaseFragment extends Fragment {
 
     public void showToast(String txt) {
+        //test branch
         Toast.makeText(getContext(), txt, Toast.LENGTH_SHORT).show();
     }
 
