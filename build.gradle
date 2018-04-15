@@ -23,8 +23,8 @@ allprojects {
 }
 
 ext {
-    rxAndroid = '2.0.1'
-    rxJava = '2.1.7'
+`    rxAndroid = '2.0.2'
+    rxJava = '2.1.12'
     rxBinding = '2.0.0'
     dagger2 = '2.13'
     archLifecycleRuntimeVersion = '1.0.3'
